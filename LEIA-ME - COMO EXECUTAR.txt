@@ -1,0 +1,11 @@
+Os dois arquivos executáveis são:
+
+Problema_Rio.py
+Problema_Instancias.py
+
+O Problema_Rio resolve o problema relacionado ao banco de dados Rio16.txt
+O Problema_Instancias resolve todas as instancias, da I1.PTTOR-16 até I1.PTTOR-16.
+
+O arquivo ResolveProblema.py recebe um arquivo de texto, chama o arquivo FiltraArquivo.py
+que converte o arquivo txt em vários vetores que serão utilizados na resolução do problema.
+Feito isso, ele usa os dados para resolver o problema matemático.

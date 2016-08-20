@@ -1,0 +1,57 @@
+Atividades	ID	Período
+Atletismo 	1	V
+Badminton 	2	V
+Basquetebol 	3	N
+Boxe 	4	N
+Canoagem Slalom	5	M
+Canoagem Velocidade	6	M
+Ciclismo BMX	7	V
+Ciclismo de estrada	8	V
+Ciclismo de pista 	9	M
+Ciclismo montain bike	10	M
+Esgrima 	11	N
+Futebol 	12	N
+Ginástica artística	13	M
+Ginástica rítmica	14	M
+Ginástica de trampolim	15	V
+Golfe	16	V
+Handebol 	17	N
+Halterofilismo	18	V
+Hipismo adestramento	19	N
+Hipismo CCE	20	V
+Hipismo salto	21	N
+Hóquei sobre grama 	22	M
+Judô 	23	N
+Luta Olímpica estilo livre	24	V
+Luta Olímpica greco-romana 	25	V
+Maratonas aquáticas	26	M
+Natação	27	N
+Nado Sincronizado	28	V
+Saltos Ornamentais 	29	M
+Pólo Aquático 	30	M
+Pentatlo Moderno	31	M
+Remo 	32	V
+Rugby	33	N
+Taekwondo 	34	V
+Tiro com arco	35	M
+Tiro esportivo	36	M
+Tênis 	37	V
+Tênis de Mesa 	38	N
+Triatlo 	39	M
+Vela	40	V
+Voleibol	41	N
+Vôlei de Praia	42	V
+Barzinho na Lapa	43	N
+Pão-de-açúcar	44	V
+Cristo Redentor	45	M
+Praia de Copacabana	46	M
+Passeio no Leblon	47	N
+Passeio em Ipanema	48	M
+Visita à Barra da Tijuca	49	M
+Visita ao Aterro de Flamengo	50	V
+Visita à Candelária	51	M
+Visita ao Jardim Botânico	52	M
+Visita à Botafogo	53	V
+Feirinha de São Cristóvão	54	N
+Visita ao Maracanã	55	V
+
