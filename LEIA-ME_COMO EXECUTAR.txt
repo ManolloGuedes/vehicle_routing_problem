@@ -1,0 +1,27 @@
+#################################################################################################################
+# GCC118 - Programacao Matematica 									   	#
+# Exemplo de modelagem de problema linear utilizando a biblioteca PuLP, na linguagem Pyton, com o solver CLP    #
+# Alunos: Cezar Jr, Herlon Manollo, Tulio Silva, Caio Freitas e Rodolpho                                        #
+# Professor: Mayron C. O. Moreira.										#
+# 2016/01													#
+# Turma: 10A													#
+# DCC/UFLA													#														#		                                                        #                                                                                                               #
+#################################################################################################################
+# Informa como rodar o programa corretamente. Sao dois arquivos executaveis, conforme demonstrado abaixo.       #
+# Os demais sao chamados automaticamente ao longo da execucao.          					#
+#################################################################################################################
+
+Os dois arquivos executáveis são:
+
+Problema_Rio.py
+Problema_Instancias.py
+
+O Problema_Rio resolve o problema relacionado ao banco de dados Rio16.txt
+O Problema_Instancias resolve todas as instancias, da I1.PTTOR-16 até I40.PTTOR-16.
+
+O arquivo ResolveProblema.py recebe um arquivo de texto, chama o arquivo FiltraArquivo.py que converte o arquivo txt em 
+vários vetores que serão utilizados na resolução do problema. Feito isso, ele usa os dados para resolver o problema matemático.
+
+NOTA: Para nao comprometer a base de dados, o caminho das instancias deve ser mantido, conforme a hierarquia seguinte:
+../Dados_PTTOR-16/Rio16/Rio16.txt				Para instancia Rio16.txt
+../Dados_PTTOR-16/Instancias_1_40/IX.PTTOR-16			Para demais instancias

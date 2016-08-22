@@ -1,9 +1,27 @@
+#################################################################################################################
+# Problema_Rio.py												#
+# Implementacao do modelo de roteamento de veiculos, com restrições de custo, periodo da atividade e limite do  #
+# carro.                                                                                                        #
+# GCC118 - Programacao Matematica 									   	#
+# Exemplo de modelagem de problema linear utilizando a biblioteca PuLP, na linguagem Pyton, com o solver CLP    #
+# Alunos: Cezar Jr, Herlon Manollo, Tulio Silva, Caio Freitas e Rodolpho                                        #
+# Professor: Mayron C. O. Moreira.										#
+# 2016/01													#
+# Turma: 10A													#
+# DCC/UFLA													#														#		                                                        #                                                                                                               #
+#################################################################################################################
+# Este arquivo recece uma String contendo todos os dados de uma instancia e fragmenta essa String de modo que os#
+# dados possam ser utilizados na resolucao do problema. Basicamente separa os dados contidos na base de dados em#
+# estruturas de dados que serao utilizadas para processar o modelo.                                             #
+#################################################################################################################
+
 def fltArq (text):
     atvPer = []         #Atividades e Periodos
     escTur = []         #Escolhas dos Turistas
     cusAtv = []         #Custos das Atividades
     escTurAtl = []      #Escolhas dos Turistas, MAS ORDENADA DE ACORDO COM O CABECALHO DOS CUSTOS DAS ATIVIDADES (Esta diferente a ordem)
     periodo = []        #Vetor com apenas os periodos de cada atividade (1 = matutino, 2 = vespertino, 3 = noturno)
+    perDiv = []         #Vetor que contem tres vetores, um para atividades matutinas, outro para vespertino e outro para noturno
     
     cusFix = 0          #Custo Fixo
     atvPerC = 0         #Controle do arquivo - Atividades e Periodos
@@ -104,16 +122,24 @@ def fltArq (text):
             periodo.append(3)
         i = i+1
 
-    #Tendo obtido os periodos, agora sera invibializadas as rotas de periodos nao consequentes.
-    #Para isso sera adicionada a rota que os liga um valor suficientemente grande para que a mesma nao seja acionada.
-    tamCus = len(atvPer)
-    for i in range(tamCus):
-        for j in range(tamCus):
-            tamPer = int(periodo[i]) - int(periodo[j])
-            if (tamPer == 2 or tamPer == -2):
-                cusAtv[i][j] = 1000
+    #A partir do vetor de periodos, serao criados tres novos vetores, um para atividades matutinas, outra para vespertinas e outra para noturnas
+    vMat = []
+    vVes = []
+    vNot = []
+    tamPer = len(periodo)
+    for i in range(tamPer):
+        if (periodo[i] == 1):
+            vMat.append(i+1)
+        elif (periodo[i] == 2):
+            vVes.append(i+1)
+        elif (periodo[i] == 3):
+            vNot.append(i+1)
 
-    
+    #Salva os tres vetores de periodos em um so
+    perDiv.append(vMat)
+    perDiv.append(vVes)
+    perDiv.append(vNot)
+   
     #Retorna todos os vetores obtidos a partir da filtragem do texto
     retornoDados = []
     retornoDados.append(atvPer)
@@ -122,5 +148,6 @@ def fltArq (text):
     retornoDados.append(cusFix)
     retornoDados.append(escTurAtl)
     retornoDados.append(periodo)
+    retornoDados.append(perDiv)
 
     return retornoDados
